@@ -1,0 +1,8 @@
+.icons-list .country {
+    padding: 10px; 
+    background-color: var(--bs-border-color); 
+    border-radius: .75rem; 
+}
+.icons-list .flag { width: 100%; }
+.icons-list .alpha-2 { font-weight: 700;}
+.icons-list .capital { margin-bottom: 10px;}

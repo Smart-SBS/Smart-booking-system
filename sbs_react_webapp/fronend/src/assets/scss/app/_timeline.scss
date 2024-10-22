@@ -1,0 +1,27 @@
+.activity {
+	position: relative;
+
+	&::before {
+		background: var(--bs-border-color);
+		position: absolute;
+		content: '';
+		left: 13px;
+		height: 100%;
+		width: 1px;
+	}
+
+	.activity-header {
+		margin-bottom: 10px;
+
+		.avatar {
+			border: 2px solid var(--bs-border-color);
+		}
+	}
+
+	.activity-body {
+		display: flex;
+		padding: 1rem;
+		border-radius: .75rem;
+		margin-left: 2rem;
+	}
+}

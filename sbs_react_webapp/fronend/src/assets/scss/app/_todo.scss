@@ -1,0 +1,32 @@
+.my-todo {
+    .todo-list {
+        li {
+            border-bottom: 1px solid var(--bs-border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            padding: 14px 0;
+            font-size: 1rem;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            .fa-check {
+                color: var(--bs-gray-400);
+            }
+
+            &.active {
+                >span {
+                    color: var(--primary-color);
+                    text-decoration: line-through;
+                }
+
+                .fa-check {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+}

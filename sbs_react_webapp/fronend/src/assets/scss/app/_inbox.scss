@@ -1,0 +1,86 @@
+.app-inbox {
+    .tab-card {
+        position: relative;
+        z-index: 9;
+    }
+
+    .fa-star {
+        color: var(--bs-gray-300);
+
+        &:hover,
+        &.active {
+            color: var(--primary-color);
+        }
+    }
+
+    .order-1 {
+        .fa-circle {
+            font-size: 10px;
+        }
+
+        a {
+            color: inherit;
+
+            &:hover {
+                color: var(--accent-color);
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            height: calc(100vh - 240px);
+            min-width: 220px;
+        }
+    }
+
+    .order-2 {
+        height: calc(100vh - 240px);
+
+        .list-group {
+            li {
+                &:first-child {
+                    border-radius: .75rem .75rem 0 0;
+                }
+
+                &:last-child {
+                    border-radius: 0 0 .75rem .75rem;
+                }
+
+                &:hover {
+                    .hover-actions {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+
+                .hover-actions {
+                    position: absolute;
+                    text-align: end;
+                    display: none;
+                    width: 135px;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .order-1 {
+            @include transition(ease .1s);
+            position: relative;
+            left: 0;
+
+            &.open {
+                left: 0;
+                z-index: 99;
+            }
+        }
+    }
+
+    .card.fullscreen {
+
+        .order-1,
+        .order-2 {
+            height: calc(100vh - 140px);
+        }
+    }
+}

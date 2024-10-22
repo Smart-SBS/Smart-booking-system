@@ -1,0 +1,13 @@
+.tui-calendar {
+    .lnb-calendars-item {
+        margin-right: 10px;
+    }
+
+    .tui-full-calendar-layout {
+        background-color: transparent !important;
+    }
+
+    input[type=checkbox].tui-full-calendar-checkbox-round+span {
+        border-radius: 2px;
+    }
+}

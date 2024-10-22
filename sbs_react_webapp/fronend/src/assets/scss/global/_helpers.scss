@@ -1,0 +1,74 @@
+﻿.text-muted             {color: #9399a1 !important;}
+.fill-muted             {fill: #9399a1 !important;}
+
+.text-primary           {color: var(--primary-color) !important;}
+.text-accent            {color: var(--accent-color) !important;}
+.text-secondary         {color: var(--secondary-color) !important;}
+.text-gradient          {background: linear-gradient(145deg, var(--primary-color), var(--accent-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+
+.bg-primary             {background: var(--primary-color) !important;}
+.bg-accent              {background: var(--accent-color) !important;}
+.bg-body                {background: var(--body-color) !important}
+.bg-card                {background: var(--bs-body-bg) !important}
+
+.bg-primary-gradient    {background: var(--primary-gradient) !important; color: $white;}
+.bg-gradient            {background: linear-gradient(145deg, var(--primary-color), var(--theme-color2)) !important;}
+.bg-gradient-dark       {background: radial-gradient(94% 58.3% at 50.3% 82.6%, hsl(252, 28%, 20%) 0%, var(--token, rgb(17, 16, 19))  100%)}
+.bg-gradient-dark2      {background: radial-gradient(94% 92.9% at 100% 96.1%, #413025 0%, var(--token, rgb(17, 16, 19))  100%)}
+
+.gray-6                 {color: var(--bs-gray-600);}
+
+.theme-color1           {background-color: var(--theme-color1) !important}
+.theme-color2           {background-color: var(--theme-color2) !important}
+.theme-color3           {background-color: var(--theme-color3) !important}
+.theme-color4           {background-color: var(--theme-color4) !important}
+.theme-color5           {background-color: var(--theme-color5) !important}
+.theme-color6           {background-color: var(--theme-color6) !important}
+
+.light-bg1              {background-color: var(--light-bg1)}
+.light-bg2              {background-color: var(--light-bg2)}
+.light-bg3              {background-color: var(--light-bg3)}
+.light-bg4              {background-color: var(--light-bg4)}
+.light-bg5              {background-color: var(--light-bg5)}
+.light-bg6              {background-color: var(--light-bg6)}
+
+.fill-primary           {fill: var(--primary-color) !important}
+.fill-accent            {fill: var(--accent-color) !important}
+.fill-secondary         {fill: var(--secondary-color) !important}
+
+.theme-fill-color1      {fill: var(--theme-color1) !important}
+.theme-fill-color2      {fill: var(--theme-color2) !important}
+.theme-fill-color3      {fill: var(--theme-color3) !important}
+.theme-fill-color4      {fill: var(--theme-color4) !important}
+.theme-fill-color5      {fill: var(--theme-color5) !important}
+.theme-fill-color6      {fill: var(--theme-color6) !important}
+
+.theme-text-color1      {color: var(--theme-color1) !important}
+.theme-text-color2      {color: var(--theme-color2) !important}
+.theme-text-color3      {color: var(--theme-color3) !important}
+.theme-text-color4      {color: var(--theme-color4) !important}
+.theme-text-color5      {color: var(--theme-color5) !important}
+.theme-text-color6      {color: var(--theme-color6) !important}
+
+.title-font{
+    font-family: var(--title-font);
+    font-weight: 500;
+}
+.fl-title{
+    font-weight: 400;
+    &::first-letter{
+        color: var(--text-color);
+        font-weight: 900;
+        text-decoration: underline;
+    }
+}
+
+.font-17{
+    font-size: 17px
+}
+
+.custom_scroll{
+    @include c_overflow(scroll);
+}
+
+.b-dashed {border-style: dashed;}

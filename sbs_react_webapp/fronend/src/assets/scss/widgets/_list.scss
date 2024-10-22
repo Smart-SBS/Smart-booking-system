@@ -1,0 +1,95 @@
+.tagcloud {
+    display: flex;
+    flex-wrap: wrap;
+
+    .tag-link {
+        color: var(--bs-body-color);
+        display: inline-block;
+        text-decoration: none;
+        padding: 4px 10px;
+        margin-bottom: 4px;
+        margin-right: 4px;
+        font-size: 15px;
+
+        &:hover {
+            color: var(--bs-white);
+            background: var(--hover-color);
+            border-color: var(--hover-color);
+        }
+    }
+}
+
+
+
+.submit-track {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+    padding: 0 20px 0 90px;
+
+    li {
+        position: relative;
+        padding: 0 0 30px 20px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: var(--primary-color);
+        }
+    }
+
+    >li:last-child {
+        padding-bottom: 0;
+    }
+
+    .date {
+        background-color: var(--bs-border-color);
+        color: var(--bs-gray-700);
+        position: absolute;
+        margin-right: 20px;
+        top: 0;
+        right: 100%;
+    }
+
+    .circle {
+        background-color: var(--primary-color);
+        color: $white;
+        position: absolute;
+        text-align: center;
+        font-size: 13px;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    ul {
+        margin: 10px 0 -30px -20px;
+
+        li .circle {
+            top: 6px;
+            width: 8px;
+            height: 8px;
+        }
+    }
+}
+
+.team-members {
+    img {
+        border: 2px solid var(--card-color);
+        margin-left: -10px;
+
+        &:hover {
+            box-shadow: 0 0.5rem 1rem rgba($dark, .1) !important;
+            position: relative;
+            z-index: 99;
+        }
+    }
+}

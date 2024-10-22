@@ -1,0 +1,39 @@
+.app-chat {
+    .page-body {
+        background: var(--bs-body-bg);
+    }
+
+    .order-1 {
+        a {
+            color: inherit;
+            padding: .5rem 0;
+
+            &:hover {
+                color: var(--accent-color);
+            }
+
+            .msg-time {
+                color: var(--bs-gray-400);
+                font-size: 12px;
+            }
+        }
+    }
+
+    .order-2 {}
+
+    @include media-breakpoint-up(lg) {
+
+        .order-1,
+        .order-2 {
+            height: calc(100vh - 170px);
+        }
+    }
+
+    .card.fullscreen {
+
+        .order-1,
+        .order-2 {
+            height: calc(100vh - 10px);
+        }
+    }
+}

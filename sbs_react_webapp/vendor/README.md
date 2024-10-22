@@ -1,0 +1,1 @@
+# This folder contains source code for the vendor dashboard of the smart booking system

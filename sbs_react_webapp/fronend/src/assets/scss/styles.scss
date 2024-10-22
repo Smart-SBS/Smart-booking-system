@@ -1,0 +1,31 @@
+// framework css ( Bootstrap )
+@import "~bootstrap/scss/bootstrap";
+
+// framework custom css ( Bootstrap )
+@import "bootstrap_custom";
+
+// global css ( template fonts, theme color, helper classes etc.)
+@import "global/fonts";
+@import "global/themes";
+@import "global/mixins";
+@import "global/general";
+@import "global/helpers";
+@import "global/animation";
+
+// app css ( Chat, Inbox, Blog, Timeline etc. )
+@import "app-list";
+
+// plugin css ( third party plugin customize css as per theme )
+@import "plugin-list";
+@import "app-list";
+
+// layout css ( for example: top header, sidebar menu, mini sidebar etc. )
+@import "layout";
+@import "brand";
+@import "sidebar";
+@import "header";
+@import "page-header";
+
+// widgets css ( for example: card, list, table, etc. )
+@import "widgets/card";
+@import "widgets/list";

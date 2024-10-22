@@ -1,0 +1,429 @@
+// card 
+.card{
+    border-color: var(--bs-border-color);
+    .card-body{
+        &.show{  
+            form,.form,table,.table-data{
+                display: none;
+            }
+            .form-code,.table-code{
+                display: block;
+            }
+        }
+        .form-code,.table-code{
+            display: none;
+        }
+    }
+    &.card-callout{
+        border-left-width: .4rem;
+        border-left-color: var(--primary-color);
+    }
+    &.fieldset{
+        background: transparent;
+        position: relative;
+        border-style: dashed !important;
+        margin-top: 1rem;
+        padding: 1rem;
+
+        .fieldset-tile{
+            position: absolute;
+            top: -12px;
+            font-weight: 600;
+            padding: 0 5px;
+        }
+    }
+    &.shadow-active{
+        box-shadow: 0px 15px 30px rgba(var(--reverse-color-black),.05);
+        &.bg-transparent{
+            box-shadow: none;
+        }
+    }
+    .card-header{
+        background-color: var(--card-color);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        padding-top: 1rem;
+    }
+    .card-footer{
+        background-color: var(--card-color);
+        border-top: 1px dashed var(--bs-border-color);
+    }
+    .card-action{
+        > a{
+            color: var(--bs-gray-400);
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            &:hover{
+                color: var(--accent-color);
+            }
+        }
+    }
+
+    &.fullscreen{
+        background-color: var(--bs-card-bg) !important;
+        @include c_overflow(scroll);
+        position: fixed;
+        border-radius: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 99;
+        .card-fullscreen{
+            svg{
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &.hr-arrow{
+        position: relative;
+        overflow: hidden;
+
+        .go-corner {
+            background: var(--dynamic-color);
+            //background-image: linear-gradient(-45deg, var(--primary-color) 1%, var(--accent-color) 100%);
+            color: $white;
+            transition: all 0.3s ease-out;
+            display: flex;
+            position: absolute;
+            transform: skew(7deg);
+            top: 0;
+            right: -50px;
+            height: 100%;
+            width: 36px;
+            padding-right: 9px;
+        }      
+        .go-arrow {
+            transform: skew(-7deg);
+            margin-left: -2px;
+            margin-top: 9px;
+            opacity: 0;
+        }
+
+        &:hover{
+            border-color: var(--dynamic-color);
+            border-style: solid;
+
+            svg,
+            .title{
+                color: var(--dynamic-color);
+            }
+
+            .go-corner {
+                transition: all 0.3s ease-out;
+                right: -14px;
+            }
+            .go-arrow {
+                opacity: 1;
+            }
+        }
+    }
+
+}
+.cardtext-color{
+    h2,h3,h4,h5,h6{
+        color: var(--dynamic-color);
+    }
+    &:hover{
+        background-color: var(--dynamic-color);
+        color: var(--bs-white);
+        h2,h3,h4,h5,h6{
+            color: var(--bs-white);
+        }
+    }
+}
+.card-border{
+    i{
+        color: var(--dynamic-color);
+    }
+    &:hover{
+        border-color: var(--dynamic-color);
+        color: var(--dynamic-color);
+    }
+}
+.card-avatar{
+    .avatar{
+        background-color: var(--dynamic-color);
+        color: var(--bs-white);
+    }
+    &:hover{
+        border-color: var(--dynamic-color);
+    }
+}
+.card-social{
+    i{
+        color: var(--dynamic-color);
+    }
+    &:hover{
+        border-color: var(--dynamic-color);
+    }
+}
+
+.hover-bg{
+    &:hover{
+        background-color: var(--hover-bg);
+        border-color: var(--hover-bg);
+        color: var(--bs-black);
+    }
+}
+
+// card ribbon 
+.ribbon{
+    position: relative;
+    overflow: hidden;
+    
+    .option-1{
+        height: 2rem;
+        top: 1.2rem;
+        left: 0;
+        width: 5px;
+    }
+    .option-2{
+        height: 5px;
+        left: 1.2rem;
+        top: 0;
+        width: 2rem;
+    }
+    .option-3{
+        transform: rotate(315deg);
+        left: -50px;
+        top: 8px;
+        padding: 5px 15px;
+        text-align: center;
+        width: 150px;
+    }
+    .option-4{
+        transform: rotate(315deg);
+        right: -50px;
+        bottom: 8px;
+        padding: 5px 15px;
+        text-align: center;
+        width: 150px;
+    }
+    .option-5{
+        transform: rotate(315deg);
+        left: -27px;
+        top: -5px;
+        padding: 5px;
+        text-align: center;
+        width: 78px;
+    }
+    .option-6{
+        transform: rotate(46deg);
+        right: -33px;
+        top: -5px;
+        padding: 8px 0 1px 6px;
+        text-align: center;
+        width: 90px;
+    }
+    .option-7{
+        background: var(--primary-color);
+        z-index: 9;
+        left: 0;
+        top: 15px;
+        height: 30px;
+        padding: 5px 0 5px 10px;
+
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 100%;
+            display: block;
+            content: '';
+            border: 15px solid var(--primary-color);
+            border-right: 8px solid transparent;
+            border-right-color: transparent;
+        }
+    }
+    .option-8{
+        background: var(--primary-color);
+        right: 0;
+        top: 1.5rem;
+        height: 30px;
+        padding: 5px 10px 5px 0;
+
+        &::before{
+            position: absolute;
+            top: 0;
+            right: 100%;
+            display: block;
+            content: '';
+            border: 15px solid var(--primary-color);
+            border-left: 8px solid transparent;
+            border-left-color: transparent;
+        }
+    }
+    .option-9{
+        background: var(--primary-color);
+        text-align: center;
+        right: 20px;
+        top: 0;
+        width: 30px;
+        padding: 5px 5px 0 5px;
+
+        &::before{
+            position: absolute;
+            top: 22px;
+            right: 0;
+            display: block;
+            content: '';
+            border: 15px solid var(--primary-color);
+            border-bottom: 5px solid transparent;
+            border-bottom-color: transparent;
+        }
+    }
+    .option-10{
+        background: var(--primary-gradient);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 6px), 0 calc(100% - 12px));
+        transition: clip-path 1s, padding 1s, background 1s;
+        text-align: center;
+        right: 20px;
+        top: 0;
+        width: 30px;
+        height: 40px;
+        padding: 5px;
+    }
+    .option-11{
+        background: var(--chart-color1);
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), 50% 100%, 0 calc(100% - 8px));
+        transition: clip-path 1s, padding 1s, background 1s;
+        text-align: center;
+        right: 20px;
+        top: 0;
+        width: 30px;
+        height: 40px;
+        padding: 5px;
+    }
+    .option-12{
+        background: var(--chart-color3);
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), 40% 100%, 0 calc(100% - 12px));
+        transition: clip-path 1s, padding 1s, background 1s;
+        text-align: center;
+        right: 20px;
+        top: 0;
+        width: 30px;
+        height: 40px;
+        padding: 5px;
+    }
+    .option-13{
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        + .card-body{
+            z-index: 99;
+            position: relative;
+        }
+
+        &::after{
+            background: repeating-linear-gradient(45deg, var(--card-color) , var(--card-color) 10px, #3C7AB8 0, #3C7AB8 20px, var(--card-color) 0, var(--card-color) 30px, #CB2C4B 0, #CB2C4B 40px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            content: "";
+            z-index: 0;
+        }            
+        &::before{
+            background-color: var(--card-color);
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            height: calc(100% - 10px);
+            width: calc(100% - 10px);
+            content: "";
+            z-index: 1;
+            border-radius: 10px;
+        }
+    }
+   
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+// file 
+.file_folder{
+    >a {
+        color: inherit;
+        display: flex;
+        align-items: center;
+        i{
+            color: var(--dynamic-color);
+        }
+
+        &:hover{
+            border-color: var(--dynamic-color);
+            color: var(--dynamic-color);
+        }
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+    }
+}
+
+// calendar tab css
+.calendar-tab{
+    > ul{
+        @include transition(ease .1s);
+        flex-wrap: nowrap;
+        overflow: hidden;
+        text-align: center;
+
+        @include media-breakpoint-down(md) {
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;  // IE 10+
+            scrollbar-width: none; // Firefox
+        }
+
+        li{
+            flex: 1 1 auto;
+            padding: 0 .6rem;
+            font-size: 12px;
+
+            &:nth-child(8),
+            &:nth-child(16),
+            &:nth-child(24) {
+                border-right: 2px solid var(--bs-border-color);
+            }
+        }
+
+    }
+    .nav-link{
+        color: var(--primary-color);
+        height: 34px;
+        width: 34px;
+        border-radius: 40px;
+        font-size: 1rem;
+        padding: 5px;
+        white-space: nowrap;
+        margin: 0 auto;
+
+        &:hover{
+            background: rgba(var(--primary-rgb),.2);
+        }
+        &.active{
+            color: var(--bs-white);
+            background: var(--primary-color);
+        }
+    }
+}

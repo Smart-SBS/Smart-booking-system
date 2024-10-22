@@ -1,0 +1,20 @@
+.brand {
+    position: relative;
+
+    .brand-icon {
+        color: var(--primary-color);
+    }
+
+    .nav-tabs {
+        position: absolute;
+        bottom: 10px;
+
+        >li {
+            display: none;
+
+            &:first-child {
+                display: flex;
+            }
+        }
+    }
+}

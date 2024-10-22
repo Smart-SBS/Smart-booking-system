@@ -1,0 +1,154 @@
+body {
+    @include transition(all 0.3s ease);
+    font-family: var(--body-font);
+
+    &.radius-0 {
+
+        .card,
+        .card .card-header,
+        .card .card-footer,
+        .form-select,
+        .btn,
+        .form-control,
+        .nav-link,
+        .dropdown-menu,
+        .choose-skin li div,
+        .choose-skin li.active:after,
+        .rounded,
+        .rounded-1,
+        .rounded-2,
+        .rounded-3,
+        .rounded-4,
+        .rounded-pill,
+        .card .card-img-top,
+        .alert,
+        .badge,
+        .input-group-text,
+        .btn:after,
+        .choose-skin li div::after {
+            border-radius: 0 !important;
+        }
+    }
+
+    &.monochrome {
+        filter: gray;
+        /* IE6-9 */
+        -webkit-filter: grayscale(1);
+        /* Google Chrome, Safari 6+ & Opera 15+ */
+        filter: grayscale(1);
+        /* Microsoft Edge and Firefox 35+ */
+        overflow: hidden;
+    }
+
+    // svg icon stroke 1, 2, and 3
+    &.svgstroke-a {
+        .svg-stroke {
+            stroke-width: 0.07rem;
+        }
+    }
+
+    &.svgstroke-b {
+        .svg-stroke {
+            stroke-width: 0.1rem;
+        }
+    }
+
+    &.svgstroke-c {
+        .svg-stroke {
+            stroke-width: 0.12rem;
+        }
+    }
+
+    // main layout border
+    &.layout-border {
+        .brand {
+            border-right: 1px solid var(--bs-border-color);
+            border-bottom: 1px solid var(--bs-border-color);
+        }
+
+        header,
+        .page-header {
+            border-bottom: 1px solid var(--bs-border-color);
+        }
+
+        .sidebar {
+            border-right: 1px solid var(--bs-border-color);
+        }
+
+        .rightbar {
+            border-left: 1px solid var(--bs-border-color);
+        }
+    }
+}
+
+// for card layout height
+.row-deck {
+
+    >.col,
+    >[class*='col-'] {
+        display: flex;
+        align-items: stretch;
+
+        .card {
+            flex: 1 1 auto;
+        }
+    }
+}
+
+:is(a) {
+    color: var(--accent-color);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.contacts {
+    >li {
+        background: var(--bs-body-bg);
+        border: 1px solid transparent;
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        border-radius: .7rem;
+        margin-bottom: 5px;
+
+        &:hover {
+            border-color: var(--primary-color);
+        }
+    }
+
+    .form-check {
+        margin-right: 1rem;
+    }
+
+    a {
+        display: flex;
+        text-decoration: none;
+    }
+}
+
+// pricing table css
+.pricing-table {
+    .owl-stage {
+        display: flex;
+        align-items: stretch;
+
+        .owl-item {
+            background: var(--bs-body-bg);
+            border-radius: .75rem;
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {}

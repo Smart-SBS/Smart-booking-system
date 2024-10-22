@@ -1,0 +1,12 @@
+.icons-list .col:hover i.fa { background: var(--primary-color); color: var(--bs-white);}
+.icons-list .col i.fa { 
+    background: var(--bs-border-color);
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 8px;
+}

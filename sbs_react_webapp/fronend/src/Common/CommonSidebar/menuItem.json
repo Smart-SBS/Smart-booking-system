@@ -1,0 +1,26 @@
+{
+  "businessMenuItems": [
+    {
+      "link": "admin/categories",
+      "label": "Categories"
+    },
+    {
+      "link": "admin/subCategories",
+      "label": "Sub Categories"
+    },
+    {
+      "link": "admin/businessList",
+      "label": "Businesses"
+    }
+  ],
+  "locationMenuItems": [
+    {
+      "link": "admin/cities",
+      "label": "Cities"
+    },
+    {
+      "link": "admin/areas",
+      "label": "Areas"
+    }
+  ]
+}

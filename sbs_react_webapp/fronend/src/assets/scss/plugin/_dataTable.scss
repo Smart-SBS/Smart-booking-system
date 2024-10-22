@@ -1,0 +1,59 @@
+// Admin Layout (BVITE)
+// @author:pixelwibes ( https://themeforest.net/user/pixelwibes )
+// @design by:pixelwibes.
+// @event-namespace: BVITE
+// Copyright 2023pixelwibes
+
+.dataTable{
+    &.collapsed{
+        tbody{
+            > tr >td{
+                padding-left: 1.5rem;
+            }
+        }
+        .dtr-control{
+            position: relative;
+            &::before{
+                background: rgba(var(--primary-rgb),.3);
+                color: var(--bs-white);
+                content: "\f107";
+                font-family: 'FontAwesome';
+                position: absolute;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                left: -8px;
+                min-width: 18px;
+                height: 18px;
+                border-radius: 11px;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+        .dt-hasChild{
+            &.parent{
+                .dtr-control:before{
+                    content: "\f106" !important;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    .dataTables_wrapper {
+        .dataTables_length{
+            display: none;
+        }
+        .dataTables_filter{
+            label{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                .form-control{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
